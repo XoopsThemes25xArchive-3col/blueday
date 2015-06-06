@@ -1,0 +1,55 @@
+
+
+
+<div id="xo-globalnav" class="x2-nl x2-navigation">
+
+
+<ul>
+		<li class="x2-label"><{$smarty.const.THEME_NAVTITLE}></li>
+
+        <!-- menu en mode anonyme -->
+
+		<li><a href="<{xoAppUrl}>" accesskey="a"  title="<{$smarty.const.THEME_HOME_DESC}>"><img src="<{xoImgUrl icons/action/home.png}>" />&nbsp;<{$smarty.const.THEME_HOME}></a></li>
+		
+    
+    <{if !$xoops_isuser}>
+
+
+    <li><a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><img src="<{xoImgUrl icons/action/articles.png}>" />&nbsp;<{$smarty.const.THEME_MODULE1}></a></li>
+
+		<li><a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE2_DESC}>"><img src="<{xoImgUrl icons/action/telechargement.png}>" />&nbsp;<{$smarty.const.THEME_MODULE2}></a>
+                </li>
+
+		<li><a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE3_DESC}>"><img src="<{xoImgUrl icons/action/lien.png}>" />&nbsp;<{$smarty.const.THEME_MODULE3}></a>
+                </li>
+                
+		<li><a href="<{xoAppUrl modules/myalbum/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><img src="<{xoImgUrl icons/action/images.png}>" />&nbsp;<{$smarty.const.THEME_MODULE4}></a>
+                </li>
+
+
+		<{else}>
+
+    <li><a href="<{xoAppUrl modules/news/}>" accesskey=""  title="<{$smarty.const.THEME_MODULE1_DESC}>"><img src="<{xoImgUrl icons/action/articles.png}>" />&nbsp;<{$smarty.const.THEME_MODULE1}></a></li>
+
+		<li><a href="<{xoAppUrl modules/mydownloads/}>" accesskey="" title="<{$smarty.const.THEME_MODULE2_DESC}>"><img src="<{xoImgUrl icons/action/telechargement.png}>" />&nbsp;<{$smarty.const.THEME_MODULE2}></a></li>
+
+		<li><a href="<{xoAppUrl modules/mylinks/}>" accesskey="" title="<{$smarty.const.THEME_MODULE3_DESC}>"><img src="<{xoImgUrl icons/action/lien.png}>" />&nbsp;<{$smarty.const.THEME_MODULE3}></a></li>
+                
+		<li><a href="<{xoAppUrl modules/myalbum/}>" accesskey="" title="<{$smarty.const.THEME_MODULE4_DESC}>"><img src="<{xoImgUrl icons/action/images.png}>" />&nbsp;<{$smarty.const.THEME_MODULE4}></a></li>
+		
+		<{/if}>
+
+
+		<{if $xoops_isadmin}>
+
+		<!-- lien supplémentaire si je suis administrateur -->
+
+		<li><a href="<{xoAppUrl modules/system/admin.php}>" accesskey="p" title="<{$smarty.const.THEME_ADMIN_DESC}>"><img src="<{xoImgUrl icons/action/administration.png}>" />&nbsp;<{$smarty.const.THEME_ADMIN}><!--[if IE 7]><!--></a><!--<![endif]-->
+				<!--[if lte IE 6]><table><tr><td><![endif]--></li>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+
+		
+		<{/if}>
+		<li><a href="<{xoAppUrl modules/liaise/}>" accesskey="c" title="<{$smarty.const.THEME_CONTACT_DESC}>"><img src="<{xoImgUrl icons/action/contact.png}>" />&nbsp;<{$smarty.const.THEME_CONTACT}></a></li>
+</ul>
+</div>
